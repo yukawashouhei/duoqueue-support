@@ -8,7 +8,7 @@
 <header>
 <a href="index.html">Duo Queue Support</a>
 <h1>Privacy Policy</h1>
-<p>Effective September 14, 2026</p>
+<p>Effective September 22, 2026</p>
 </header>
 <main>
 <section>
@@ -16,10 +16,17 @@
 <p>Duo Queue stores game titles, tags, play status, ratings, moods, notes, chosen cover photos, source links, imported friends' lists, game-night nicknames, shortlists, choices, plans and memories on your device. We do not operate an account service, social network or backend for this content. We do not send game content or game-night choices to RevenueCat.</p>
 </section>
 <section>
-<h2>Game discovery and rooms</h2>
-<p>The FreeToGame catalog and artwork connect to FreeToGame; filtering that catalog happens on your device. When IGDB search is connected, the title you search and requested game IDs are sent to our catalog service hosted by Google Cloud and then to IGDB. IGDB serves the game artwork directly. This service does not receive your private library, notes, personal photos or room choices. The service caches public game responses temporarily; we do not add application request logs. Providers may process IP addresses and ordinary network information under their own infrastructure policies. A working catalog connection is shown in the app; an unconnected service does not offer console search.</p>
+<h2>Scanning a game box</h2>
+<p>On the Scan tab you point the camera at a game box or a screen and press the shutter. The camera runs only while the Scan tab is open, and nothing is recorded. When you press the shutter, the single frame you took is reduced to about 640 pixels and sent once to our catalog service, hosted on Google Cloud, which passes it to OpenAI's API to identify the game in the picture. Our service does not store the photo, does not attach it to any identifier, and keeps only the name the model returned so the same answer does not have to be requested twice. Under OpenAI's API data usage terms, content sent through the API is not used to train their models. The app may send, alongside the photo, a few lines of text it read from the box on your device; if the picture gives no answer, those lines are sent on their own to be corrected and searched.</p>
+<p>The photo stays on your device only if you choose "Add … from this photo", in which case it becomes the game's cover in your library. The first scan is free; from the second one the app asks for Queue Pass before it captures or sends anything.</p>
+<p>Sources: <a href="https://openai.com/policies/api-data-usage-policies">OpenAI API data usage</a> and <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google Cloud Privacy Notice</a>.</p>
+</section>
+<section>
+<h2>Game discovery, trailers and rooms</h2>
+<p>The FreeToGame catalog and artwork connect to FreeToGame; filtering that catalog happens on your device. When IGDB search is connected, the title you search and requested game IDs are sent to our catalog service hosted by Google Cloud and then to IGDB. IGDB serves the game artwork directly. The "Live on Twitch" and "Streamer" chips read Twitch's public listings through the same service; there is no Twitch sign-in and nothing about you is sent to Twitch. This service does not receive your private library, notes, personal photos or room choices. The service caches public game responses temporarily; we do not add application request logs. Providers may process IP addresses and ordinary network information under their own infrastructure policies. A working catalog connection is shown in the app; an unconnected service does not offer console search.</p>
+<p>A game's page can show the publisher's trailer as a YouTube embed (youtube-nocookie.com). Nothing plays until you press the play button; when you do, YouTube and Google receive ordinary network information such as your IP address and may set cookies in the embedded player, under Google's privacy policy. The app itself does not report what you watched.</p>
 <p>A .duoroom file includes its room name, game references, participant nicknames and choices. It includes public catalog metadata and artwork URLs, not the image files, your personal photos or private notes. The file is sent only through a share action you choose. Returned documents merge participant updates on the receiving device; there is no automatic room synchronization.</p>
-<p>Sources: <a href="https://www.igdb.com">IGDB</a>, <a href="https://www.freetogame.com">FreeToGame</a> and <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google Cloud Privacy Notice</a>.</p>
+<p>Sources: <a href="https://www.igdb.com">IGDB</a>, <a href="https://www.freetogame.com">FreeToGame</a>, <a href="https://www.twitch.tv/p/legal/privacy-notice/">Twitch Privacy Notice</a>, <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google Cloud Privacy Notice</a>.</p>
 </section>
 <section>
 <h2>Purchases</h2>
@@ -28,7 +35,7 @@
 </section>
 <section>
 <h2>Source links and images</h2>
-<p>When you share or open a game source link, Apple's LinkPresentation may contact the linked website to fetch a title or thumbnail. That website can receive ordinary network information such as your IP address. Source thumbnails are stored as a local cache and are excluded from generated sharing cards and exported lists. If you choose a personal cover photo using Apple's photo picker, the selected photo is stored locally; the app does not require access to your entire photo library.</p>
+<p>When you share or open a game source link, Apple's LinkPresentation may contact the linked website to fetch a title or thumbnail. That website can receive ordinary network information such as your IP address. Source thumbnails are stored as a local cache and are excluded from generated sharing cards and exported lists. If you choose a personal cover photo using Apple's photo picker, the selected photo is stored locally; the app does not require access to your entire photo library, and photos chosen this way are never sent anywhere.</p>
 </section>
 <section>
 <h2>What you choose to share</h2>
@@ -36,7 +43,7 @@
 </section>
 <section>
 <h2>Retention and deletion</h2>
-<p>The app retains local content until you remove it. Settings → Erase everything on this device removes your shelf, imported lists, game nights, memories, cover photos, cached thumbnails and app settings. Your App Store purchase is not deleted. Files or images already shared outside the app remain with their recipients or destination services. Apple's device backup and the purchase providers' retention policies may apply to data those services hold.</p>
+<p>The app retains local content until you remove it. Settings → Erase everything on this device removes your shelf, imported lists, game nights, memories, cover photos, cached thumbnails and app settings. Your App Store purchase is not deleted. Files or images already shared outside the app remain with their recipients or destination services. Apple's device backup and the purchase providers' retention policies may apply to data those services hold. Photos sent for scanning are not retained by our service, so there is nothing to delete on our side.</p>
 </section>
 <section>
 <h2>Support and policy changes</h2>
@@ -44,14 +51,17 @@
 </section>
 <section lang="ja">
 <h2>日本語</h2>
-<p>FreeToGameの一覧・画像はFreeToGameから取得し、その一覧の絞り込みは端末内で行います。IGDBの検索に接続した場合、検索したゲーム名と取得するゲームIDをGoogle Cloud上の検索サービス経由でIGDBに送信し、画像をIGDBから直接読み込みます。マイリスト・個人のメモや写真・ルームの選択内容は、このサービスに送信しません。公開ゲーム情報を一時キャッシュし、独自のリクエストログは追加しません。各事業者がIPアドレスなど通常の通信情報を自社の方針に従って扱う場合があります。未接続時は家庭用ゲームを検索できません。</p>
-<p>.duoroomファイルにはルーム名・ゲーム情報・参加者のニックネームと選択内容が入ります。公開カタログの情報と画像URLを含みますが、画像ファイル・個人の写真・メモは含めません。自分で共有先を選んだときだけ送信します。返ってきたファイルを端末内で統合する方式で、自動同期はありません。</p>
 <p>Duo Queueはゲーム名、タグ、状態、星、気分、メモ、選んだ写真、出典リンク、友達のリスト、ゲームナイトのニックネーム・候補・選択・プラン・思い出を端末内に保存します。独自のアカウントサービス、SNS、ゲームの記録を保存するサーバーは運営していません。ゲームの内容や二人の選択をRevenueCatへ送信することはありません。</p>
+<p><strong>パッケージのスキャン。</strong>「スキャン」タブでカメラをゲームのパッケージや画面に向けてシャッターを押します。カメラはスキャンタブを開いている間だけ動作し、録画はしません。シャッターを押すと、撮った1枚を約640ピクセルに縮小して、Google Cloud上の当方の検索サービスへ1回だけ送信し、サービスがOpenAIのAPIに渡して写っているゲームを識別します。当方のサービスは写真を保存せず、いかなる識別子とも結び付けず、同じ問い合わせを繰り返さないためにモデルが返したゲーム名だけを保持します。OpenAIのAPI利用条件では、APIを通じて送信した内容はモデルの学習に使用されません。写真と一緒に、端末内でパッケージから読み取った数行の文字を送ることがあり、写真で答えが得られない場合はその文字だけを送って補正・検索します。</p>
+<p>写真が端末に残るのは、「この写真から追加」を選んでライブラリのカバーにした場合だけです。最初の1枚のスキャンは無料で、2枚目からは撮影や送信の前にQueue Passの購入画面を表示します。</p>
+<p>FreeToGameの一覧・画像はFreeToGameから取得し、その一覧の絞り込みは端末内で行います。IGDBの検索に接続した場合、検索したゲーム名と取得するゲームIDをGoogle Cloud上の検索サービス経由でIGDBに送信し、画像をIGDBから直接読み込みます。「Twitchで配信中」「配信者」の一覧は、同じサービスがTwitchの公開情報を読み取るもので、Twitchへのログインはなく、あなたに関する情報をTwitchへ送ることもありません。マイリスト・個人のメモや写真・ルームの選択内容は、このサービスに送信しません。公開ゲーム情報を一時キャッシュし、独自のリクエストログは追加しません。各事業者がIPアドレスなど通常の通信情報を自社の方針に従って扱う場合があります。未接続時は家庭用ゲームを検索できません。</p>
+<p>ゲームのページでは、発売元のトレーラーをYouTubeの埋め込み（youtube-nocookie.com）で表示できます。再生ボタンを押すまで再生されません。押すとYouTubeとGoogleがIPアドレスなど通常の通信情報を受け取り、埋め込みプレーヤー内でCookieを設定することがあります（Googleのプライバシーポリシーに従います）。アプリ自体が視聴内容を記録・送信することはありません。</p>
+<p>.duoroomファイルにはルーム名・ゲーム情報・参加者のニックネームと選択内容が入ります。公開カタログの情報と画像URLを含みますが、画像ファイル・個人の写真・メモは含めません。自分で共有先を選んだときだけ送信します。返ってきたファイルを端末内で統合する方式で、自動同期はありません。</p>
 <p>決済はAppleが処理し、RevenueCatが購入と復元を確認します。RevenueCatは取引・レシート情報、匿名のアプリユーザー識別子、購入処理に必要な端末・アプリ情報を扱い、管理画面で購入に関する集計を行います。広告や、他社アプリ・サイトを横断するトラッキングは行いません。</p>
-<p>共有されたリンクの情報を取得する際、AppleのLinkPresentationがリンク先へ接続し、IPアドレスなど通常の通信情報が相手のサイトに届く場合があります。サムネイルは端末内に保存し、共有カードやリストの書き出しには含めません。写真はAppleの写真選択画面で選んだものだけを利用します。</p>
+<p>共有されたリンクの情報を取得する際、AppleのLinkPresentationがリンク先へ接続し、IPアドレスなど通常の通信情報が相手のサイトに届く場合があります。サムネイルは端末内に保存し、共有カードやリストの書き出しには含めません。カバー用の写真はAppleの写真選択画面で選んだものだけを端末内に保存し、外部へ送信することはありません。</p>
 <p>送信するリストには表示名、ゲーム名、比較用に表記をそろえたタイトル、タグ、状態、書き出し日時が含まれます。出典URLは設定をオンにした場合だけ含まれます。表示名には、本名の代わりにニックネームを使えます。カードには選んだゲームのタイトル、星、気分、メモが載ります。ゲームナイトの共有文には相手のニックネーム、ゲーム名、予定する時間、思い出が含まれる場合があります。アプリが自動で送信することはありません。送信先サービスや受け取った人が扱うデータには、その送信先の方針が適用されます。</p>
-<p>「設定 → この端末のデータをすべて削除」で端末内の記録、取り込んだリスト、写真、キャッシュ、設定を削除できます。購入済みの権利や、アプリ外へ送ったファイルは削除されません。Appleの端末バックアップや購入サービス側の保存方針が適用される場合があります。</p>
-<p>お問い合わせメールで受け取ったメールアドレスと内容は、回答のために利用します。プライバシーに関するご質問・ご依頼は、<a href="mailto:tangocards.support@gmail.com">tangocards.support@gmail.com</a>へご連絡ください。</p>
+<p>「設定 → この端末のデータをすべて削除」で端末内の記録、取り込んだリスト、写真、キャッシュ、設定を削除できます。購入済みの権利や、アプリ外へ送ったファイルは削除されません。Appleの端末バックアップや購入サービス側の保存方針が適用される場合があります。スキャンのために送信した写真は当方のサービスに残らないため、当方側で削除する対象はありません。</p>
+<p>お問い合わせメールで受け取ったメールアドレスと内容は、回答のために利用します。プライバシーに関するご質問・ご依頼は、<a href="mailto:tangocards.support@gmail.com">tangocards.support@gmail.com</a>へご連絡ください。重要な変更はこのページに発効日とともに掲載します。</p>
 </section>
 </main>
 <footer>© 2026 Duo Queue</footer>
